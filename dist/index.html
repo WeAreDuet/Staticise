@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="World-class community marathon events in historic cities">
+  <title>Heritage Marathon Series</title>
+  <style>
+    :root {
+      --neutral: #E8E0D4;
+      --primary: #2C2C2C;
+      --secondary: #6B6358;
+      --accent: #B85C38;
+      --font-heading: 'Georgia', serif;
+      --font-body: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--primary);
+      background: var(--neutral);
+      line-height: 1.6;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(180deg, rgba(44,44,44,0.05) 0%, var(--neutral) 100%);
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--secondary);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero .cta {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--accent);
+      color: var(--neutral);
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.3s;
+    }
+
+    .hero .cta:hover { background: #9A4B2E; }
+
+    /* Section */
+    section {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 400;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* Race Grid */
+    .race-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .race-card {
+      background: white;
+      padding: 2.5rem;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .race-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .race-card .meta {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .race-card p {
+      color: var(--secondary);
+      font-size: 0.95rem;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat .number {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent);
+    }
+
+    .stat .label {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Tips Section */
+    .tips {
+      background: white;
+      padding: 4rem 2rem;
+    }
+
+    .tips-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .tip {
+      padding: 2rem;
+    }
+
+    .tip h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tip p {
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--secondary);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .stats { gap: 2rem; }
+      section { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Run Through History</h1>
+    <p>Community marathon events in the world's most storied cities. Every stride echoes with heritage, every finish line marks a new chapter.</p>
+    <a href="#races" class="cta">View the Calendar</a>
+  </div>
+
+  <div class="stats" role="region" aria-label="Marathon statistics">
+    <div class="stat">
+      <div class="number">12</div>
+      <div class="label">Historic Cities</div>
+    </div>
+    <div class="stat">
+      <div class="number">48K</div>
+      <div class="label">Runners Annually</div>
+    </div>
+    <div class="stat">
+      <div class="number">6</div>
+      <div class="label">Continents</div>
+    </div>
+    <div class="stat">
+      <div class="number">23</div>
+      <div class="label">Years Running</div>
+    </div>
+  </div>
+
+  <section id="races">
+    <h2>The Heritage Calendar</h2>
+    <div class="race-grid">
+      <div class="race-card">
+        <h3>Athens Classic Marathon</h3>
+        <div class="meta">March 15, 2026 &middot; Athens, Greece</div>
+        <p>Trace the original marathon route from Marathon to Athens. Pass the Tomb of the Athenians and finish at the Panathenaic Stadium — the same marble arena that hosted the 1896 Olympics.</p>
+      </div>
+      <div class="race-card">
+        <h3>Rome Imperial Half</h3>
+        <div class="meta">April 22, 2026 &middot; Rome, Italy</div>
+        <p>A half-marathon weaving through the Forum, past the Colosseum, and along the Tiber. Aid stations in piazzas. The kind of run that makes you forget you're racing.</p>
+      </div>
+      <div class="race-card">
+        <h3>Edinburgh Castle Run</h3>
+        <div class="meta">June 8, 2026 &middot; Edinburgh, Scotland</div>
+        <p>From Arthur's Seat to the Royal Mile. Cobblestones, castles, and the kind of hills that humble you. Finishers receive a hand-forged medal from a local blacksmith.</p>
+      </div>
+      <div class="race-card">
+        <h3>Kyoto Temple Trail</h3>
+        <div class="meta">October 3, 2026 &middot; Kyoto, Japan</div>
+        <p>Wind through bamboo groves and past a thousand torii gates. The route connects 26 temples — one for each mile. Autumn leaves provide the only spectator color you need.</p>
+      </div>
+      <div class="race-card">
+        <h3>Washington Monument 10K</h3>
+        <div class="meta">November 11, 2026 &middot; Washington, D.C.</div>
+        <p>A Veterans Day tradition. From the Lincoln Memorial to the Capitol steps, past the reflecting pool. The most photographed 10K in America, and for good reason.</p>
+      </div>
+      <div class="race-card">
+        <h3>Havana Malecón Marathon</h3>
+        <div class="meta">December 12, 2026 &middot; Havana, Cuba</div>
+        <p>Twenty-six miles along the seawall. Salsa bands at every mile marker. Classic cars pace the leaders. A race that feels less like a competition and more like a celebration.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="tips">
+    <section>
+      <h2>First-Timer Tips</h2>
+      <div class="tips-grid">
+        <div class="tip">
+          <h3>Train for the Terrain</h3>
+          <p>Every Heritage race has unique elevation. Edinburgh's hills are legendary. Rome's cobblestones demand ankle stability. Download the course-specific training plan 12 weeks out.</p>
+        </div>
+        <div class="tip">
+          <h3>Arrive Two Days Early</h3>
+          <p>Jet lag is a real factor. Arriving early lets you walk parts of the course, adjust to the climate, and soak in the city without the race-day pressure.</p>
+        </div>
+        <div class="tip">
+          <h3>Respect the History</h3>
+          <p>Our routes pass through sacred and protected sites. Stay on marked paths, follow marshal instructions at heritage zones, and remember: you're a guest of the city.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Heritage Marathon Series &copy; 2026 &middot; <a href="#">Register</a> &middot; <a href="#">Contact</a></p>
+    <p>Built with <a href="https://github.com/WeAreDuet/Staticise">Staticise</a> — autoresearch-powered design</p>
+  </footer>
+</body>
+</html>

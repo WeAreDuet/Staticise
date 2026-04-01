@@ -6,6 +6,7 @@ import { registerStatus } from './commands/status.js';
 import { registerResearch } from './commands/research.js';
 import { registerExport } from './commands/export.js';
 import { registerDeploy } from './commands/deploy.js';
+import { registerPreview } from './commands/preview.js';
 
 export const program = new Command();
 
@@ -21,3 +22,4 @@ registerStatus(program);
 registerResearch(program);
 registerExport(program);
 registerDeploy(program);
+registerPreview(program);
